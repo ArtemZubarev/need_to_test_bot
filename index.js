@@ -47,7 +47,10 @@ bot.on("callback_query", async (query) => {
 
   if (query.data === "get_tasks") {
     const message = await getTasks();
-    bot.sendMessage(chatId, `Список задач в Test:\n\n${message}`);
+    bot.sendMessage(
+      chatId,
+      `@ivanmarkov13 проверь плс, выкатил апдейт:\n\n${message}`
+    );
   }
 
   // Чтобы убрать “часики” у кнопки после нажатия

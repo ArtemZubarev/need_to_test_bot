@@ -23,7 +23,7 @@ async function getTasks() {
   try {
     const query = encodeURIComponent("State: {Test}");
     const res = await axios.get(
-      `https://${youtrackDomain}/api/issues?fields=summary&query=${query}`,
+      `${youtrackDomain}/api/issues?fields=summary&query=${query}`,
       {
         headers: {
           Authorization: `Bearer ${youtrackToken}`,

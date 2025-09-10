@@ -12,7 +12,7 @@ const bot = new TelegramBot(tgBotToken, { polling: true });
 async function getTasks() {
   try {
     const res = await axios.get(
-      `https://${youtrackDomain}/api/issues?fields=summary&query=State: {Test}`,
+      `${youtrackDomain}/api/issues?fields=summary&query=State: {Test}`,
       {
         headers: {
           Authorization: `Bearer ${youtrackToken}`,
